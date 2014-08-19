@@ -1,3 +1,11 @@
+section {
+    width: 100%;
+    height: 800px;
+    background: aqua;
+    margin: auto;
+    padding: 10px;
+}
+
 #guitar-fret-box {
   width: 50%;
   height: 1000px;
@@ -10,34 +18,39 @@
   background: black;
 }
 
+/*Contains guitar fret and question-mark frets*/
+#guitar-fret-container {
+  position:relative;
+}
+
+/*Actual image of guitar fret */
 #guitar-fret {
   -webkit-transform:rotate(90deg);
   margin-top:350px;
-  position: relative;
-  margin-left:0px;
+  position:relative;
 }
 
+/*Question marks on frets*/
 #S1F1, #S1F2, #S1F3 {
   position: absolute;
   background-size: 100%;
   background-image: url(http://findicons.com/files/icons/2227/picol/32/questionmark_32.png);
   width: 2em;  height: 2em;
 }
+
 #S1F1 {
-  right: 730px;
-  top: 195px;
+  right: 417px;
+  top: 83px;
 }
 
 #S1F2 {
-  position: absolute;
-  right: 693px;
-  top: 195px;
+  right: 417px;
+  top: 123px;
 }
 
 #S1F3 {
-  position: absolute;
-  right: 652px;
-  top: 195px;
+  right: 417px;
+  top: 163px;
 }
 
 .note-button {
@@ -74,9 +87,10 @@
   text-decoration:none;
   text-align:center;
   text-shadow:1px 1px 0px #cc9f52;
+  position:absolute;
 }
 
-/*.note-button:hover {
+.note-button:hover {
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
   background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
@@ -85,24 +99,27 @@
 .note-button:active {
   position:relative;
   top:1px;
-}*/
+}
 
+#f {
+  margin-top:0px;
+}
 
-
-/*#f-sharp {
-  margin-right:600px;
-  margin-bottom:600px;
+#f-sharp {
+  margin-top:200px;
 }
 
 #g {
-  margin-right:400px;
-}*/
-
-section {
-    width: 100%;
-    height: 800px;
-    background: aqua;
-    margin: auto;
-    padding: 10px;
+  margin-top:400px;
 }
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    font-size:40px;
+    color:blue;
+}
+
 
