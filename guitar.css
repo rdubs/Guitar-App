@@ -11,6 +11,7 @@ section {
   height: 1000px;
   background: red;
   float: left;
+  text-align:center;
 }
 
 #buttons {
@@ -21,17 +22,16 @@ section {
 /*Contains guitar fret and question-mark frets*/
 #guitar-fret-container {
   position:relative;
+  display:inline-block;
 }
 
 /*Actual image of guitar fret */
 #guitar-fret {
-  -webkit-transform:rotate(90deg);
-  margin-top:350px;
   position:relative;
 }
 
 /*Question marks on frets*/
-#S1F1, #S1F2, #S1F3 {
+#guitar-fret-container > button {
   position: absolute;
   background-size: 100%;
   background-image: url(http://findicons.com/files/icons/2227/picol/32/questionmark_32.png);
@@ -39,18 +39,18 @@ section {
 }
 
 #S1F1 {
-  right: 417px;
-  top: 83px;
+  top:12px;
+  left:-6px;
 }
 
 #S1F2 {
-  right: 417px;
-  top: 123px;
+  top:52px;
+  left:-6px;
 }
 
 #S1F3 {
-  right: 417px;
-  top: 163px;
+  top:92px;
+  left:-6px;
 }
 
 .note-button {
