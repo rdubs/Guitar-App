@@ -13,23 +13,17 @@ var currentFret;
 
 // Loop down the rows
 for (var i = 0; i < NUM_ROWS; i++) {
-	buttons[i] = new Array(NUM_COLUMNS);
 
 	// Loop across columns
 	for (var j = 0; j < NUM_COLUMNS; j++) {
 		var btn = document.createElement('button');
-		btn.style.marginTop = INITIAL_TOP + i * 40 + 'px';
+		btn.style.top = INITIAL_TOP + i * 40 + 'px';
 		btn.style.left = INITIAL_LEFT + j * 40 + 'px';
-		btn.style.display = 'none';
+		// btn.style.display = 'none';
 		guitarFretContainer.appendChild(btn);
-		buttons[i][j] = btn;
-		btn.note = 'A';
 	};
 };
 
-
-currentFret = buttons[2][5];
-currentFret.style.display = '';
 
 
 
