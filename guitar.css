@@ -38,21 +38,6 @@ section {
   width: 2em;  height: 2em;
 }
 
-#S1F1 {
-  top:12px;
-  left:-6px;
-}
-
-#S1F2 {
-  top:52px;
-  left:-6px;
-}
-
-#S1F3 {
-  top:92px;
-  left:-6px;
-}
-
 .note-button {
   -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
   -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
@@ -101,15 +86,15 @@ section {
   top:1px;
 }
 
-#f {
+#F {
   margin-top:0px;
 }
 
-#f-sharp {
+#F-Sharp {
   margin-top:200px;
 }
 
-#g {
+#G {
   margin-top:400px;
 }
 

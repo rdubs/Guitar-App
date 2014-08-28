@@ -2,7 +2,7 @@
  *
  */
 
-var noteMappings = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
+var noteMappings = ['A', 'A-Sharp', 'B', 'C', 'C-Sharp', 'D', 'D-Sharp', 'E', 'F', 'F-Sharp', 'G', 'G-Sharp'];
 
 var A_SHARP = 1;
 var C = 3;
@@ -21,6 +21,7 @@ var FIRST_FRET_NOTES = [F, A_SHARP, D_SHARP, G_SHARP, C, F]; //Notes in first fr
 var buttons = new Array();
 var guitarFretContainer = document.getElementById('guitar-fret-container');
 var currentFret;
+var answerDiv = document.getElementById('footer');
 
 //Create buttons in column major format.
 for (var col = 0; col < NUM_COLUMNS; col++) {
@@ -38,9 +39,24 @@ for (var col = 0; col < NUM_COLUMNS; col++) {
 		currPosition++;
 	};
 };
-var index = Math.floor(Math.random() * (buttons.length ));
-var btn = buttons[index];
+var btn = buttons[Math.floor(Math.random() * (buttons.length))];
 btn.style.display = '';	
+currentFret = btn.note;
+
+//add onClick function to all answer buttons.
+var answerButtons = document.getElementsByClassName('note-button');
+for (var i = 0; i < answerButtons.length; i++) {
+	answerButtons[i].onClick = checkIfRight;
+}
+
+function checkIfRight() {
+	if (this.id === currentFret) {
+		answerDiv.innerHTML = 'YOU ARE A MUSICAL GENIUS';
+	} else {
+		answerDiv.innerHTML = 'YOU SUCK';
+	}
+}
+
 
 
 
