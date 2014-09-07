@@ -9,7 +9,7 @@ section {
 #guitar-fret-box {
   width: 50%;
   height: 1000px;
-  background: red;
+  background: green;
   float: left;
   text-align:center;
 }
@@ -17,6 +17,8 @@ section {
 #buttons {
   height: 1000px;
   background: black;
+  position: relative;
+  display: inline-block;
 }
 
 /*Contains guitar fret and question-mark frets*/
@@ -86,16 +88,58 @@ section {
   top:1px;
 }
 
+#A {
+
+}
+
+#A-Sharp {
+  left: 125px;
+}
+
+#B {
+  left: 250px;
+}
+
+#C {
+  left: 375px;
+}
+
+#C-Sharp {
+  top: 70px;
+}
+
+#D {
+ top: 70px;
+ left: 125px; 
+}
+
+#D-Sharp {
+  top: 70px;
+  left: 250px;
+}
+
+#E {
+  top: 70px;
+  left:375px;
+}
+
 #F {
-  margin-top:0px;
+  top: 140px;
 }
 
 #F-Sharp {
-  margin-top:200px;
+  top: 140px;
+  left: 125px;
 }
 
 #G {
-  margin-top:400px;
+  top: 140px;
+  left: 250px;
+}
+
+#G-Sharp {
+  top: 140px;
+  left: 375px;
 }
 
 #footer {

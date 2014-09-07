@@ -46,14 +46,18 @@ currentFret = btn.note;
 //add onClick function to all answer buttons.
 var answerButtons = document.getElementsByClassName('note-button');
 for (var i = 0; i < answerButtons.length; i++) {
-	answerButtons[i].onClick = checkIfRight;
+	answerButtons[i].onclick = checkIfRight;
 }
+// var test = answerButtons[0];
+// test.onClick();
 
 function checkIfRight() {
 	if (this.id === currentFret) {
 		answerDiv.innerHTML = 'YOU ARE A MUSICAL GENIUS';
+		answerDiv.style.color = 'green';
 	} else {
 		answerDiv.innerHTML = 'YOU SUCK';
+		answerDiv.style.color = 'red';
 	}
 }
 
