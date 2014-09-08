@@ -25,9 +25,9 @@ var answerDiv = document.getElementById('footer');
 
 //Create buttons in column major format.
 for (var col = 0; col < NUM_COLUMNS; col++) {
-	
+
 	var currPosition = FIRST_FRET_NOTES[col];
-	
+
 	for (var row = 0; row < NUM_ROWS; row++) {
 		var btn = document.createElement('button');
 		btn.style.top = INITIAL_TOP + row * 40 + 'px';
@@ -40,11 +40,11 @@ for (var col = 0; col < NUM_COLUMNS; col++) {
 	};
 };
 var btn = buttons[Math.floor(Math.random() * (buttons.length))];
-btn.style.display = '';	
+btn.style.display = '';
 currentFret = btn.note;
 
 //add onClick function to all answer buttons.
-var answerButtons = document.getElementsByClassName('note-button');
+var answerButtons = document.getElementById('buttons').getElementsByTagName('button');
 for (var i = 0; i < answerButtons.length; i++) {
 	answerButtons[i].onclick = checkIfRight;
 }
