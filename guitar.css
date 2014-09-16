@@ -1,7 +1,7 @@
 section {
-    width: 100%;
-    height: 800px;
     background: aqua;
+    display: block;
+    height: 800px;
     margin: auto;
     padding: 10px;
 }
@@ -15,10 +15,9 @@ section {
 }
 
 #buttons {
-  height: 1000px;
   background: black;
-  position: relative;
-  display: inline-block;
+  float: left;
+  height: 1000px;
 }
 
 /*Contains guitar fret and question-mark frets*/
@@ -40,106 +39,48 @@ section {
   width: 2em;  height: 2em;
 }
 
-.note-button {
-  -moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-  -webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
-  box-shadow:inset 0px 1px 0px 0px #fce2c1;
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
-  background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
-  background-color:#ffc477;
-  -webkit-border-top-left-radius:20px;
-  -moz-border-radius-topleft:20px;
-  border-top-left-radius:20px;
-  -webkit-border-top-right-radius:20px;
-  -moz-border-radius-topright:20px;
-  border-top-right-radius:20px;
-  -webkit-border-bottom-right-radius:20px;
-  -moz-border-radius-bottomright:20px;
-  border-bottom-right-radius:20px;
-  -webkit-border-bottom-left-radius:20px;
-  -moz-border-radius-bottomleft:20px;
-  border-bottom-left-radius:20px;
-  text-indent:0;
-  border:1px solid #eeb44f;
-  display:inline-block;
-  color:#ffffff;
-  font-family:Comic Sans MS;
-  font-size:15px;
-  font-weight:bold;
-  font-style:normal;
-  height:50px;
-  line-height:50px;
-  width:100px;
-  text-decoration:none;
-  text-align:center;
-  text-shadow:1px 1px 0px #cc9f52;
-  position:absolute;
+#buttons > button {
+  -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+  box-shadow: inset 0px 1px 0px 0px #fce2c1;
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+
+  background-color: #ffc477;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25));
+  background: -webkit-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+  background: -moz-linear-gradient(top, #ffc477 5%, #fb9e25 100%);
+  background: linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+
+  border: 1px solid #eeb44f;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  color: #ffffff;
+  font-family: Comic Sans MS;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 50px;
+  height: 50px;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0px #cc9f52;
+  margin: 10px;
+  padding: 0;
 }
 
-.note-button:hover {
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
-  background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
-  background-color:#fb9e25;
-}
-.note-button:active {
-  position:relative;
-  top:1px;
-}
-
-#A {
-
-}
-
-#A-Sharp {
-  left: 125px;
-}
-
-#B {
-  left: 250px;
-}
-
-#C {
-  left: 375px;
-}
-
-#C-Sharp {
-  top: 70px;
-}
-
-#D {
- top: 70px;
- left: 125px; 
-}
-
-#D-Sharp {
-  top: 70px;
-  left: 250px;
-}
-
-#E {
-  top: 70px;
-  left:375px;
-}
-
-#F {
-  top: 140px;
-}
-
-#F-Sharp {
-  top: 140px;
-  left: 125px;
-}
-
-#G {
-  top: 140px;
-  left: 250px;
-}
-
-#G-Sharp {
-  top: 140px;
-  left: 375px;
+#buttons > button:hover {
+  background-color: #fb9e25;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477));
+  background: -webkit-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+  background: -moz-linear-gradient(top, #fb9e25 5%, #ffc477 100%);
+  background: linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
 }
 
 #footer {
