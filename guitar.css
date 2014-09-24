@@ -1,7 +1,7 @@
 section {
     background: aqua;
     display: block;
-    height: 800px;
+    height: 1000px;
     margin: auto;
     padding: 10px;
 }
@@ -9,15 +9,16 @@ section {
 #guitar-fret-box {
   width: 50%;
   height: 1000px;
-  background: green;
+  background: purple;
   float: left;
   text-align:center;
 }
 
 #buttons {
-  background: black;
+  background: purple;
   float: left;
   height: 1000px;
+  width: 50%;
 }
 
 /*Contains guitar fret and question-mark frets*/

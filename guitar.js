@@ -23,6 +23,10 @@ var guitarFretContainer = document.getElementById('guitar-fret-container');
 var currentFret;
 var answerDiv = document.getElementById('footer');
 
+//initialize sounds
+var correctAnswerSound = new Audio('mario_coin.wav');
+var wrongAnswerSound = new Audio('yoshi_spitting.wav');
+
 //Create buttons in column major format.
 for (var col = 0; col < NUM_COLUMNS; col++) {
 
@@ -48,16 +52,26 @@ var answerButtons = document.getElementById('buttons').getElementsByTagName('but
 for (var i = 0; i < answerButtons.length; i++) {
 	answerButtons[i].onclick = checkIfRight;
 }
-// var test = answerButtons[0];
-// test.onClick();
+
+function playSound(soundfile) {
+  document.getElementById("dummy").innerHTML=
+    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+}
 
 function checkIfRight() {
 	if (this.id === currentFret) {
-		answerDiv.innerHTML = 'YOU ARE A MUSICAL GENIUS';
 		answerDiv.style.color = 'green';
+		answerDiv.innerHTML = 'YOU ARE A MUSICAL GENIUS';
+		correctAnswerSound.play();
+		//hide current fret and pick new one.
+		btn.style.display = 'none';
+		btn = buttons[Math.floor(Math.random() * (buttons.length))];
+		btn.style.display = '';
+		currentFret = btn.note;
 	} else {
-		answerDiv.innerHTML = 'YOU SUCK';
 		answerDiv.style.color = 'red';
+		answerDiv.innerHTML = 'YOU SUCK';
+		wrongAnswerSound.play();
 	}
 }
 
