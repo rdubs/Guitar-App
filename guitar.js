@@ -55,7 +55,7 @@ for (var i = 0; i < answerButtons.length; i++) {
 
 function playSound(soundfile) {
   document.getElementById("dummy").innerHTML=
-    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+    '<embed src="'+soundfile+'" hidden="true" autostart="true" loop="false" />';
 }
 
 function checkIfRight() {
